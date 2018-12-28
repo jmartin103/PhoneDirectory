@@ -49,8 +49,8 @@ public class PhoneRecord implements Comparable<PhoneRecord> {
 	
 	// Comparable Object to maintain sorting in data structure
 	public int compareTo(PhoneRecord o) {
-		if (lName == o.lName) { // Last names are equal
-			if (fName == o.fName) { // First names are equal
+		if (lName.equalsIgnoreCase(o.lName)) { // Last names are equal
+			if (fName.equalsIgnoreCase(o.fName)) { // First names are equal
 				return phoneNum.compareTo(o.phoneNum); // Sort by phone number
 			}
 			return fName.compareTo(o.fName); // Sort by first name
